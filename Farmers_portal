@@ -34,7 +34,8 @@ class Farmer
 				 			System.out.println("Item available");
 				 			System.out.println("Last updated price : "+amt);
 				 			System.out.println("Enter your price");
-				 			amt=sc.nextFloat();
+				 			float amtb=sc.nextFloat();
+							amt=Math.max(amtb,amt);
 				 			System.out.println("***********Thanks for using Farmers portal*********");
 							System.out.println("-----------We will keep you updated-----------------");
 				 		}
