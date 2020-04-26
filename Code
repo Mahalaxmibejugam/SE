@@ -1,8 +1,11 @@
 import java.util.*;
 public class code
 {
+  int a=10;
+  int b=20;
   public int add(int a,int b)
   {
-    return a+b;
+    return this.a+this.b;
   }
+ 
 }
