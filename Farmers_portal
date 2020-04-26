@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.*;
 class Farmer
 {
@@ -18,7 +19,10 @@ class Farmer
 						item=sc.next();
 						System.out.println("Enter the starting price");
 						amt=sc.nextFloat();
-						System.out.println("Your crop details:\nType of crop : "+item+"\nInitial price : "+amt);
+						System.out.println("Enter last date for the crop to be sold");
+						String datein=sc.next();
+						Date date=new SimpleDateFormat("dd/MM/yyyy").parse(datein);
+						System.out.println("Your crop details:\nType of crop : "+item+"\nInitial price : "+amt+"\nDate : "+date);
 						System.out.println("***********Thanks for using Farmers portal*********");
 						System.out.println("-----------We will keep you updated-----------------");
 						break;
