@@ -1,0 +1,52 @@
+import java.util.*;
+class Farmer
+{
+	public static void main(String[] args) throws Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		String item="";
+		String confirm="";
+		float amt=0;
+		do
+		{
+			System.out.println("Enter 1 for farmer and 2 for Buyer");
+			int c=sc.nextInt();
+			switch(c)
+			{
+				 case 1:System.out.println("-------------Farmers Portal-----------");
+						System.out.println("Enter type of crop");
+						item=sc.next();
+						System.out.println("Enter the starting price");
+						amt=sc.nextFloat();
+						System.out.println("Your crop details:\nType of crop : "+item+"\nInitial price : "+amt);
+						System.out.println("***********Thanks for using Farmers portal*********");
+						System.out.println("-----------We will keep you updated-----------------");
+						break;
+				 case 2:System.out.println("-------------Buyers Portal-----------");
+				 		System.out.println("Enter crop");
+				 		String crop=sc.next();
+				 		if(crop.equals(item))
+				 		{
+				 			System.out.println("Item available");
+				 			System.out.println("Last updated price : "+amt);
+				 			System.out.println("Enter your price");
+				 			amt=sc.nextFloat();
+				 			System.out.println("***********Thanks for using Farmers portal*********");
+							System.out.println("-----------We will keep you updated-----------------");
+				 		}
+				 		else
+				 		{
+				 			System.out.println("Product not available");
+				 			System.out.println("***********Thanks for using Farmers portal*********");
+				 		}
+				 		break;
+			}
+			System.out.println("Do you want to browse more(yes/no)");
+			confirm=sc.next();
+
+		}while(!confirm.equals("no"));
+
+
+	}
+		
+}
